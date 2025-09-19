@@ -14,7 +14,8 @@
     <!-- Header -->
     <header class="bg-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold text-teal-600">Entre Amigos</h1>
+             <img src="https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/Logo%20de%20librer%C3%ADa.png?raw=true" alt="Logo Entre Amigos" class="h-20 w-20">
+        
             <div class="flex items-center space-x-4">
                 <div class="relative">
                     <input type="text" id="searchInput" placeholder="Buscar libros..." class="pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500">
@@ -33,7 +34,6 @@
                     <li><a href="#cafe-club" class="text-teal-600 hover:text-teal-800 transition">Café Literario</a></li>
                     <li><a href="#cafe-club" class="text-teal-600 hover:text-teal-800 transition">Club de Lectura</a></li>
                     <li><a href="#" class="text-teal-600 hover:text-teal-800 transition">Contacto</a></li>
-					<li><a href="./login.php" class="text-teal-600 hover:text-teal-800 transition">Acceder</a></li>
                 </ul>
             </nav>
         </div>

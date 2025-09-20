@@ -34,6 +34,8 @@
                     <li><a href="#cafe-club" class="text-teal-600 hover:text-teal-800 transition">Café Literario</a></li>
                     <li><a href="#cafe-club" class="text-teal-600 hover:text-teal-800 transition">Club de Lectura</a></li>
                     <li><a href="#" class="text-teal-600 hover:text-teal-800 transition">Contacto</a></li>
+                    					<li><a href="./login.php" class="text-teal-600 hover:text-teal-800 transition">Acceder</a></li>
+
                 </ul>
             </nav>
         </div>

@@ -3,7 +3,7 @@ session_start();
 $msj = "";
 if(isset($_SESSION["OK"])){
     if($_SESSION["OK"]){
-        header("location:/inicio_prueba.php");
+        header("location:/index.php");
         exit;
     }
 }
@@ -27,7 +27,7 @@ if(isset($_POST["EMAIL"]))
                 $msj = "No se ha encontrado un usuario con ese nombre o contraseña.";
             } else {
                 $_SESSION["OK"] = 1;
-                header("location:/inicio_prueba.php");
+                header("location:/index.php");
                 exit;
         }
     }

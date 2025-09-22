@@ -1,4 +1,6 @@
 <?php
+session_start()
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,13 +30,18 @@
             </div>
             <nav class="hidden md:flex">
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="text-teal-600 hover:text-teal-800 transition">Inicio</a></li>
+                    <li><a href="./index.php" class="text-teal-600 hover:text-teal-800 transition">Inicio</a></li>
                     <li><a href="#featured-books" class="text-teal-600 hover:text-teal-800 transition">Libros</a></li>
                     <li><a href="#categories" class="text-teal-600 hover:text-teal-800 transition">Categorías</a></li>
                     <li><a href="#cafe-club" class="text-teal-600 hover:text-teal-800 transition">Café Literario</a></li>
                     <li><a href="#cafe-club" class="text-teal-600 hover:text-teal-800 transition">Club de Lectura</a></li>
                     <li><a href="#" class="text-teal-600 hover:text-teal-800 transition">Contacto</a></li>
+                    <!-- Esto hace que cambie arriba a la derecha y pase a decir tu perfil cuando estas logeado -->
+                                        <?php if (!isset($_SESSION["OK"])) : ?>
                     					<li><a href="./login.php" class="text-teal-600 hover:text-teal-800 transition">Acceder</a></li>
+                                        <?php else : ?>
+                                        <li><a href="./inicio_prueba.php" class="text-teal-600 hover:text-teal-800 transition">Mi perfil</a></li>
+                                        <?php endif;?>
 
                 </ul>
             </nav>
@@ -72,7 +79,7 @@
                 <h3 class="text-5xl font-bold text-teal-600 mb-6 fade-in">Café Literario & Club de Lectura</h3>
                 <p class="text-lg text-gray-700 mb-8 fade-in max-w-2xl mx-auto">Embárcate en un viaje donde las páginas cobran vida. Nuestro café literario ofrece un ambiente cálido para disfrutar de lecturas individuales, debates apasionados y conexiones profundas. Únete al club de lectura para explorar géneros diversos, compartir insights únicos y construir una comunidad de amantes de los libros. Eventos semanales, talleres creativos y noches temáticas te esperan.</p>
                 <div class="flex justify-center space-x-4 fade-in">
-                    <button id="joinClubBtn" class="btn-primary">Únete al Club</button>
+                    <button id="joinClubBtn" class="btn-primary"><a href="./club_index.php">Únete al Club</a></button>
                     <button id="reserveCafeBtn" class="btn-primary">Reserva en el Café</button>
                 </div>
             </div>

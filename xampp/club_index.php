@@ -1,6 +1,5 @@
 <?php
-
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
@@ -38,12 +37,17 @@
         <a href="#calendario" class="hover:text-amarillo-oscuro transition">Calendario</a>
         <a href="#tienda" class="hover:text-amarillo-oscuro transition">Tienda</a>
         <a href="#blog" class="hover:text-amarillo-oscuro transition">Blog</a>
+                  <?php if (!isset($_SESSION["OK"])) : ?>
+                    					<a href="./login.php" class="text-teal-600 hover:text-teal-800 transition">Acceder</a>
+                                        <?php else : ?>
+                                        <a href="./inicio_prueba.php" class="text-teal-600 hover:text-teal-800 transition">Mi perfil</a>
+                                        <?php endif;?>
       </nav>
       
       <!-- Botones de usuario -->
       <div class="flex items-center space-x-4">
-        <button id="loginBtn" class="btn-secondary">Iniciar Sesión</button>
-        <button id="registerBtn" class="btn-primary">Registrarse</button>
+        <!-- <button id="loginBtn" class="btn-secondary">Iniciar Sesión</button>
+        <button id="registerBtn" class="btn-primary">Registrarse</button> -->
         <div id="userMenu" class="hidden relative">
           <button class="flex items-center space-x-2">
             <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Usuario" class="w-10 h-10 rounded-full">
@@ -93,21 +97,21 @@
         <i class="fas fa-times text-xl"></i>
       </button>
       
-      <div class="flex border-b mb-6">
+      <!-- <div class="flex border-b mb-6">
         <button class="tab-button active w-1/2" data-tab="login">Iniciar Sesión</button>
         <button class="tab-button w-1/2" data-tab="register">Registrarse</button>
-      </div>
+      </div> -->
       
       <div class="tab-content active" id="loginTab">
         <h3 class="text-2xl font-bold text-turquesa mb-6">Bienvenido de nuevo</h3>
-        <form class="space-y-4">
+        <form action="./club_index.php" method="POST" class="space-y-4">
           <div>
-            <label for="loginEmail" class="block mb-1 font-medium">Email</label>
-            <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
+            <label for="email" class="block mb-1 font-medium">Email</label>
+            <input type="email" id="email" name="EMAIL" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
           </div>
           <div>
-            <label for="loginPassword" class="block mb-1 font-medium">Contraseña</label>
-            <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
+            <label for="password" class="block mb-1 font-medium">Contraseña</label>
+            <input type="password" id="password" name="PSW" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
           </div>
           <div class="flex justify-between items-center">
             <label class="flex items-center">
@@ -116,8 +120,9 @@
             </label>
             <a href="#" class="text-turquesa hover:underline">¿Olvidaste tu contraseña?</a>
           </div>
-          <button type="submit" class="btn-primary w-full mt-4">Iniciar Sesión</button>
+          <button type="submit">Iniciar Sesión</button>
         </form>
+        <p><?php echo $msj?></p>
       </div>
       
       <div class="tab-content" id="registerTab">
@@ -528,6 +533,7 @@ Un espacio especial para revivir la saga que marcó a toda una generación de le
             <li><a href="#clubes" class="text-gray-300 hover:text-white">Clubes</a></li>
             <li><a href="#calendario" class="text-gray-300 hover:text-white">Calendario</a></li>
             <li><a href="#blog" class="text-gray-300 hover:text-white">Blog</a></li>
+            <li><a href="#" class="text-teal-600 hover:text-teal-800 transition">Contacto</a></li>
           </ul>
         </div>
         

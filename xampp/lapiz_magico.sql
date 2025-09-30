@@ -44,7 +44,7 @@ INSERT INTO `autor` (`id_autor`, `nombre`, `apellido`, `nacionalidad`, `fecha_na
 (2, 'Isaac', 'Asimov', 'Rusa-Estadounidense', '1920-01-02'),
 (3, 'Stephen', 'King', 'Estadounidense', '1947-09-21');
 ('Héctor Germán', 'Oesterheld', 'Argentina', '1919-07-23'),
-('Alberto', 'Ongaro', 'Argentina', '1931-07-22'),
+('Roberto', 'Piccardi', 'Argentina', '1931-07-22'),
 ('Stephenie', 'Meyer', 'Estadounidense', '1973-12-24'),
 ('Paula', 'Hawkins', 'Británica', '1972-08-26'),
 ('Ana', 'Frank', 'Alemana', '1929-06-12');
@@ -107,6 +107,12 @@ INSERT INTO `libros` (`id_libro`, `titulo`, `isbn`, `anio_publicacion`, `id_gene
 (1, 'Cien Años de Soledad', '978-0307474728', '1967', 1, 1),
 (2, 'Fundación', '978-0553293357', '1951', 2, 2),
 (3, 'It', '978-1501142970', '1986', 1, 3);
+('El Eternauta', '9789505159051', 1957, 2, (SELECT id_autor FROM autor WHERE apellido='Oesterheld' LIMIT 1)),
+('35 años después', '9789505159068', 1997, 2, (SELECT id_autor FROM autor WHERE apellido='Ongaro' LIMIT 1)),
+('Crepúsculo', '9780316015844', 2005, 1, (SELECT id_autor FROM autor WHERE apellido='Meyer' LIMIT 1)),
+('El Resplandor', '9780307743657', 1977, 1, (SELECT id_autor FROM autor WHERE apellido='King' LIMIT 1)),
+('La chica del tren', '9780552779777', 2015, 1, (SELECT id_autor FROM autor WHERE apellido='Hawkins' LIMIT 1)),
+('El diario de Ana Frank', '9780553296983', 1947, 3, (SELECT id_autor FROM autor WHERE apellido='Frank' LIMIT 1));
 
 
 -- --------------------------------------------------------

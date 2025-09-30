@@ -43,6 +43,11 @@ INSERT INTO `autor` (`id_autor`, `nombre`, `apellido`, `nacionalidad`, `fecha_na
 (1, 'Gabriel', 'García Márquez', 'Colombiana', '1927-03-06'),
 (2, 'Isaac', 'Asimov', 'Rusa-Estadounidense', '1920-01-02'),
 (3, 'Stephen', 'King', 'Estadounidense', '1947-09-21');
+('Héctor Germán', 'Oesterheld', 'Argentina', '1919-07-23'),
+('Alberto', 'Ongaro', 'Argentina', '1931-07-22'),
+('Stephenie', 'Meyer', 'Estadounidense', '1973-12-24'),
+('Paula', 'Hawkins', 'Británica', '1972-08-26'),
+('Ana', 'Frank', 'Alemana', '1929-06-12');
 
 -- --------------------------------------------------------
 
@@ -102,6 +107,7 @@ INSERT INTO `libros` (`id_libro`, `titulo`, `isbn`, `anio_publicacion`, `id_gene
 (1, 'Cien Años de Soledad', '978-0307474728', '1967', 1, 1),
 (2, 'Fundación', '978-0553293357', '1951', 2, 2),
 (3, 'It', '978-1501142970', '1986', 1, 3);
+
 
 -- --------------------------------------------------------
 

@@ -95,7 +95,7 @@ session_start();
                 <h3 class="text-5xl font-bold text-teal-600 mb-6 fade-in"> Club de Lectura , una nueva propuesta</h3>
                 <p class="text-lg text-gray-700 mb-8 fade-in max-w-2xl mx-auto">Nuestro club de lectura te invita a un espacio cálido para disfrutar de lecturas compartidas, debates apasionados y conexiones profundas. Explora géneros diversos, comparte tus ideas únicas y forma parte de una comunidad de verdaderos amantes de los libros. Con encuentros semanales, talleres creativos y noches temáticas, cada página se convierte en una nueva experiencia.</p>
                 <div class="flex justify-center space-x-4 fade-in">
-                    <button id="joinClubBtn" class="btn-primary"><a href="./club_index.php">Únete al Club</a></button>
+                    <button id="joinClubBtn" class="btn-primary"><a href="Club De Lectura/Index.php">Únete al Club</a></button>
                   
                 </div>
             </div>

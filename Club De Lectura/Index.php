@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -13,7 +14,7 @@ session_start();
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <link rel="stylesheet" href="Styles_club.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen flex flex-col bg-white text-gray-800 font-sans">
 
@@ -32,22 +33,20 @@ session_start();
       
       <!-- Navegación -->
       <nav class="hidden md:flex space-x-8 font-semibold text-turquesa tracking-wide">
-        <a href="./index.php" class="hover:text-amarillo-oscuro transition">Inicio</a>
+        <a href="#" class="hover:text-amarillo-oscuro transition">Inicio</a>
         <a href="#clubes" class="hover:text-amarillo-oscuro transition">Clubes</a>
-        <a href="#calendario" class="hover:text-amarillo-oscuro transition">Calendario</a>
+      
         <a href="#tienda" class="hover:text-amarillo-oscuro transition">Tienda</a>
-        <a href="#blog" class="hover:text-amarillo-oscuro transition">Blog</a>
-                  <?php if (!isset($_SESSION["OK"])) : ?>
-                    					<a href="../login.php" class="text-teal-600 hover:text-teal-800 transition">Acceder</a>
-                                        <?php else : ?>
-                                        <a href="../perfil_usuario/Index_Perfil.php" class="text-teal-600 hover:text-teal-800 transition">Mi perfil</a>
-                                        <?php endif;?>
+     
       </nav>
       
       <!-- Botones de usuario -->
       <div class="flex items-center space-x-4">
-        <!-- <button id="loginBtn" class="btn-secondary">Iniciar Sesión</button>
-        <button id="registerBtn" class="btn-primary">Registrarse</button> -->
+        <?php if (!isset($_SESSION["OK"])) : ?>
+                    					<a href="../login.php" class="text-teal-600 hover:text-teal-800 transition">Acceder</a>
+                                        <?php else : ?>
+                                        <a href="../perfil_usuario/Index_Perfil.php" class="text-teal-600 hover:text-teal-800 transition">Mi perfil</a>
+                                        <?php endif;?>
         <div id="userMenu" class="hidden relative">
           <button class="flex items-center space-x-2">
             <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Usuario" class="w-10 h-10 rounded-full">
@@ -68,7 +67,7 @@ session_start();
   <section
     class="hero h-[80vh] flex items-center justify-center text-center px-6 relative overflow-hidden rounded-3xl"
     aria-label="Invitación al club de lectura"
-    style="background-image: url('https://images.pexels.com/photos-4861330/pexels-photo-4861330.jpeg'); background-size: cover; background-position: center;"
+    style="background-image: url('https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/pexels-cottonbro-4861347.jpg?raw=true'); background-size: cover; background-position: center;"
   >
     <!-- Overlay oscuro para mejorar legibilidad -->
     <div class="absolute inset-0 bg-black bg-opacity-50 rounded-3xl pointer-events-none"></div>
@@ -97,21 +96,21 @@ session_start();
         <i class="fas fa-times text-xl"></i>
       </button>
       
-      <!-- <div class="flex border-b mb-6">
+      <div class="flex border-b mb-6">
         <button class="tab-button active w-1/2" data-tab="login">Iniciar Sesión</button>
         <button class="tab-button w-1/2" data-tab="register">Registrarse</button>
-      </div> -->
+      </div>
       
       <div class="tab-content active" id="loginTab">
         <h3 class="text-2xl font-bold text-turquesa mb-6">Bienvenido de nuevo</h3>
-        <form action="./club_index.php" method="POST" class="space-y-4">
+        <form class="space-y-4">
           <div>
-            <label for="email" class="block mb-1 font-medium">Email</label>
-            <input type="email" id="email" name="EMAIL" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
+            <label for="loginEmail" class="block mb-1 font-medium">Email</label>
+            <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
           </div>
           <div>
-            <label for="password" class="block mb-1 font-medium">Contraseña</label>
-            <input type="password" id="password" name="PSW" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
+            <label for="loginPassword" class="block mb-1 font-medium">Contraseña</label>
+            <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa">
           </div>
           <div class="flex justify-between items-center">
             <label class="flex items-center">
@@ -120,9 +119,8 @@ session_start();
             </label>
             <a href="#" class="text-turquesa hover:underline">¿Olvidaste tu contraseña?</a>
           </div>
-          <button type="submit">Iniciar Sesión</button>
+          <button type="submit" class="btn-primary w-full mt-4">Iniciar Sesión</button>
         </form>
-        <p><?php echo $msj?></p>
       </div>
       
       <div class="tab-content" id="registerTab">
@@ -347,7 +345,77 @@ Un espacio especial para revivir la saga que marcó a toda una generación de le
                     </div>
                 </div>
             </div>
-      </div>
+     <!-- Club 1 -->
+<div class="club-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+  <div class="h-40 bg-cover bg-center" style="background-image: url('https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/club%20de%20lectura%20imagenes/la-noche-de-los-lapices.jpg?raw=true')"></div>
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-4">
+      <h3 class="text-xl font-bold text-turquesa">La Noche de los Lápices</h3>
+      <span class="bg-amarillo-claro text-amarillo-oscuro px-3 py-1 rounded-full text-sm font-semibold">40 miembros</span>
+    </div>
+    <p class="text-gray-600 mb-4">Lectura y reflexión sobre el libro de María Seoane y Héctor Ruiz Núñez. 
+Un espacio para dialogar sobre la memoria, la dictadura y la importancia de la voz juvenil en la historia argentina. Contaremos con la presencia de la periodista María Seoane para un intercambio con los asistentes.</p>
+    
+    <div class="mb-4">
+      <p class="font-semibold">Libro actual: <span class="font-normal">"La Noche de los Lápices"</span></p>
+      <p class="font-semibold">Próxima reunión: <span class="font-normal">10 Oct, 18:30</span></p>
+      <p class="font-semibold">Lugar: <span class="font-normal">Librería Entre Amigos - Sala B</span></p>
+    </div>
+    
+    <div class="flex justify-between items-center">
+      <button class="btn-primary py-2 px-6 text-sm">Unirse</button>
+      <a href="#" class="text-turquesa hover:underline font-semibold">Ver detalles</a>
+    </div>
+  </div>
+</div>
+
+<!-- Club 2 -->
+<div class="club-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+  <div class="h-40 bg-cover bg-center" style="background-image: url('https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/club%20de%20lectura%20imagenes/revolucion%20de%20mayo.jpg?raw=true')"></div>
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-4">
+      <h3 class="text-xl font-bold text-turquesa">25 de Mayo: El nacimiento de una Nación</h3>
+      <span class="bg-amarillo-claro text-amarillo-oscuro px-3 py-1 rounded-full text-sm font-semibold">30 miembros</span>
+    </div>
+    <p class="text-gray-600 mb-4">Lectura del libro "Revolución de Mayo" de Felipe Pigna. 
+Se explorarán los hechos, personajes y debates que marcaron la primera gran gesta de independencia. El autor Felipe Pigna será invitado especial para dialogar sobre el proceso revolucionario.</p>
+    
+    <div class="mb-4">
+      <p class="font-semibold">Libro actual: <span class="font-normal">"Revolución de Mayo"</span></p>
+      <p class="font-semibold">Próxima reunión: <span class="font-normal">24 May, 17:00</span></p>
+      <p class="font-semibold">Lugar: <span class="font-normal">Librería Entre Amigos - Patio histórico</span></p>
+    </div>
+    
+    <div class="flex justify-between items-center">
+      <button class="btn-primary py-2 px-6 text-sm">Unirse</button>
+      <a href="#" class="text-turquesa hover:underline font-semibold">Ver detalles</a>
+    </div>
+  </div>
+</div>
+
+<!-- Club 3 -->
+<div class="club-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
+  <div class="h-40 bg-cover bg-center" style="background-image: url('https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/club%20de%20lectura%20imagenes/el%20fantasma%20de%20francisca.jpg?raw=true')"></div>
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-4">
+      <h3 class="text-xl font-bold text-turquesa">Lecturas de Libertad: El Fantasma de Francisca</h3>
+      <span class="bg-amarillo-claro text-amarillo-oscuro px-3 py-1 rounded-full text-sm font-semibold">28 miembros</span>
+    </div>
+    <p class="text-gray-600 mb-4">A través de la obra de Mario Méndez nos adentraremos en la historia de Francisca, un relato donde lo fantástico se enlaza con los ecos de la lucha por la independencia. Este club busca reflexionar sobre el pasado argentino, la memoria y el valor de quienes forjaron la libertad, conectando literatura y acontecimiento histórico en un espacio de diálogo y lectura compartida.</p>
+    
+    <div class="mb-4">
+      <p class="font-semibold">Libro actual: <span class="font-normal">"Los Caminos de la Independencia"</span></p>
+      <p class="font-semibold">Próxima reunión: <span class="font-normal">8 Jul, 18:00</span></p>
+      <p class="font-semibold">Lugar: <span class="font-normal">Librería Entre Amigos - Sala Principal</span></p>
+    </div>
+    
+    <div class="flex justify-between items-center">
+      <button class="btn-primary py-2 px-6 text-sm">Unirse</button>
+      <a href="#" class="text-turquesa hover:underline font-semibold">Ver detalles</a>
+    </div>
+  </div>
+</div>
+   </div> 
       
     </section>
     
@@ -533,7 +601,6 @@ Un espacio especial para revivir la saga que marcó a toda una generación de le
             <li><a href="#clubes" class="text-gray-300 hover:text-white">Clubes</a></li>
             <li><a href="#calendario" class="text-gray-300 hover:text-white">Calendario</a></li>
             <li><a href="#blog" class="text-gray-300 hover:text-white">Blog</a></li>
-            <li><a href="#" class="text-teal-600 hover:text-teal-800 transition">Contacto</a></li>
           </ul>
         </div>
         
@@ -566,4 +633,5 @@ Un espacio especial para revivir la saga que marcó a toda una generación de le
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

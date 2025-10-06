@@ -213,7 +213,7 @@ if (isset($_POST["cerrar"]))
     <section class="bg-white rounded-3xl shadow-lg p-8 mb-12">
       <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
         <div class="flex-shrink-0">
-          <img src="https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/Imagenes%20perfil/Sabrina%20grisel.jpg?raw=true" alt="Foto de perfil" class="w-32 h-32 rounded-full object-cover border-4 border-turquesa">
+          <img src="https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/Imagenes%20perfil/simple-flat-isolated-people-icon-free-vector.jpg?raw=true" alt="Foto de perfil" class="w-32 h-32 rounded-full object-cover border-4 border-turquesa">
         </div>
         
         <div class="flex-grow text-center md:text-left">

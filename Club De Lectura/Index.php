@@ -70,66 +70,7 @@ session_start();
       </a>
 </div>
 </section>
-<!-- Modal de Registro/Login -->
-<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="authModal">
-<div class="bg-white rounded-3xl p-8 w-full max-w-md relative">
-<button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" id="closeAuthModal">
-<i class="fas fa-times text-xl"></i>
-</button>
-<div class="flex border-b mb-6">
-<button class="tab-button active w-1/2" data-tab="login">Iniciar Sesión</button>
-<button class="tab-button w-1/2" data-tab="register">Registrarse</button>
-</div>
-<div class="tab-content active" id="loginTab">
-<h3 class="text-2xl font-bold text-turquesa mb-6">Bienvenido de nuevo</h3>
-<form class="space-y-4">
-<div>
-<label class="block mb-1 font-medium" for="loginEmail">Email</label>
-<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa" id="loginEmail" type="email"/>
-</div>
-<div>
-<label class="block mb-1 font-medium" for="loginPassword">Contraseña</label>
-<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa" id="loginPassword" type="password"/>
-</div>
-<div class="flex justify-between items-center">
-<label class="flex items-center">
-<input class="rounded text-turquesa focus:ring-turquesa" type="checkbox"/>
-<span class="ml-2">Recordarme</span>
-</label>
-<a class="text-turquesa hover:underline" href="#">¿Olvidaste tu contraseña?</a>
-</div>
-<button class="btn-primary w-full mt-4" type="submit">Iniciar Sesión</button>
-</form>
-</div>
-<div class="tab-content" id="registerTab">
-<h3 class="text-2xl font-bold text-turquesa mb-6">Crear una cuenta</h3>
-<form class="space-y-4">
-<div>
-<label class="block mb-1 font-medium" for="registerName">Nombre completo</label>
-<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa" id="registerName" type="text"/>
-</div>
-<div>
-<label class="block mb-1 font-medium" for="registerEmail">Email</label>
-<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa" id="registerEmail" type="email"/>
-</div>
-<div>
-<label class="block mb-1 font-medium" for="registerPassword">Contraseña</label>
-<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa" id="registerPassword" type="password"/>
-</div>
-<div>
-<label class="block mb-1 font-medium" for="registerConfirmPassword">Confirmar contraseña</label>
-<input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-turquesa" id="registerConfirmPassword" type="password"/>
-</div>
-<label class="flex items-start mt-2">
-<input class="rounded text-turquesa focus:ring-turquesa mt-1" type="checkbox"/>
-<span class="ml-2 text-sm">Acepto los <a class="text-turquesa hover:underline" href="#">términos y condiciones</a> y la <a class="text-turquesa hover:underline" href="#">política de privacidad</a></span>
-</label>
-<button class="btn-primary w-full mt-4" type="submit">Registrarse</button>
-</form>
-</div>
-</div>
-</div>
-<main class="container mx-auto px-6 py-16 space-y-24 max-w-7xl">
+
 <!-- Filtros de Búsqueda -->
 <section class="bg-white rounded-3xl shadow-lg p-8" id="clubes">
 <h2 class="text-3xl font-extrabold text-turquesa mb-8">Encuentra tu club ideal</h2>

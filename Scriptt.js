@@ -123,30 +123,7 @@ function initializeCart() {
     }
 }
 
-// Funcionalidad del modal
-function initializeModal() {
-    const joinClubBtn = document.getElementById('joinClubBtn');
-    const joinModal = document.getElementById('joinModal');
-    const closeJoinModal = document.getElementById('closeJoinModal');
-    const joinForm = document.getElementById('joinForm');
-    
-    if (joinClubBtn && joinModal) {
-        joinClubBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            joinModal.style.display = 'block';
-        });
-        
-        closeJoinModal.addEventListener('click', function() {
-            joinModal.style.display = 'none';
-        });
-        
-        joinForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por unirte al club! Te contactaremos pronto.');
-            joinModal.style.display = 'none';
-        });
-    }
-}
+
 
 // Animaciones
 function initializeAnimations() {

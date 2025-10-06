@@ -162,35 +162,6 @@ session_start();
         </div>
     </section>
 
-    <!-- Join Club Modal -->
-    <div id="joinModal" class="cafe-modal">
-        <div class="cafe-modal-content">
-            <h4 class="text-2xl font-bold text-teal-600 mb-4">Únete al Club de Lectura</h4>
-            <form id="joinForm">
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
-                    <input type="text" id="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 p-2">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
-                    <input type="email" id="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 p-2">
-                </div>
-                <div class="mb-4">
-                    <label for="preferences" class="block text-sm font-medium text-gray-700">Géneros Preferidos</label>
-                    <select id="preferences" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 p-2">
-                        <option>Romance</option>
-                        <option>Misterio</option>
-                        <option>Fantasía</option>
-                        <option>Infantil</option>
-                        <option>Ciencia Ficción</option>
-                        <option>Biografías</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-primary w-full">Enviar Solicitud</button>
-            </form>
-            <button id="closeJoinModal" class="mt-4 btn-primary">Cerrar</button>
-        </div>
-    </div>
 
     <!-- Featured Books -->
     <section id="featured-books" class="py-16 bg-gradient-to-b from-teal-100 to-yellow-100">

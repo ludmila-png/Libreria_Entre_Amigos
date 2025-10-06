@@ -194,7 +194,7 @@ if (isset($_POST["cerrar"]))
       <div class="flex items-center space-x-4">
         <div id="userMenu" class="relative">
           <button class="flex items-center space-x-2">
-            <img src="https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/Imagenes%20perfil/Sabrina%20grisel.jpg?raw=true" alt="Usuario" class="w-10 h-10 rounded-full">
+            <img src="https://github.com/ludmila-png/Libreria_Entre_Amigos/blob/main/Imagenes%20perfil/simple-flat-isolated-people-icon-free-vector.jpg?raw=true" alt="Usuario" class="w-10 h-10 rounded-full">
             <span class="font-semibold text-turquesa"><?php echo $nombre?></span>
           </button>
           <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden" id="dropdownMenu">

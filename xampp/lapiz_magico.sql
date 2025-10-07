@@ -202,6 +202,7 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `apellido_2`, `telefono`, `e
 (1, 'lucas', 'cossari', NULL, '1132591231', 'lucascossari@gmail.com', '1234', 0),
 (5, 'mati', 'figue', NULL, '1234', 'mati@gmail.com', '1234', 0),
 (6, 'ludmi', 'cristaldo', NULL, '111111111111111', 'ludmi@gmail.com', '1234', 0);
+(6, 'jorge luis', 'borges', NULL, '111111111111111', 'borges@tec6.com', '1234', 0);
 
 --
 -- Índices para tablas volcadas

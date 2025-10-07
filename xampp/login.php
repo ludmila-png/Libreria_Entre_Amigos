@@ -18,7 +18,6 @@ if(isset($_POST["EMAIL"]))
         $msj = "Error de conexion";
     }
     else {
-        // Use prepared statement to prevent SQL injection
         $consulta = "SELECT * FROM lapiz_magico.usuarios WHERE email=? and password=?";
         $stmt = mysqli_prepare($ref, $consulta);
         if ($stmt) {

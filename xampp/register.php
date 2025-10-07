@@ -81,7 +81,7 @@ if(isset($_POST["EMAIL"]))
         aria-required="true"
       />
 
-      <label for="email">Tu apellido</label>
+      <label for="email">Tu número de teléfono</label>
       <input
         type="email"
         id="email"

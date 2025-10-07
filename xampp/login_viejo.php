@@ -18,31 +18,20 @@ if(isset($_POST["EMAIL"]))
         $msj = "Error de conexion";
     }
     else {
-        // Use prepared statement to prevent SQL injection
-        $consulta = "SELECT * FROM lapiz_magico.usuarios WHERE email=? and password=?";
-        $stmt = mysqli_prepare($ref, $consulta);
-        if ($stmt) {
-            mysqli_stmt_bind_param($stmt, "ss", $EMAIL, $PSW);
-            mysqli_stmt_execute($stmt);
-            $rta = mysqli_stmt_get_result($stmt);
-            
-            if(!$rta)
-                $msj="Query error";
-            else {
-                if(mysqli_num_rows($rta) == 0) {
-                    $msj = "No se ha encontrado un usuario con ese nombre o contraseña.";
-                } else {
-                    $_SESSION["OK"] = 1;
-                    header("location:/index.php");
-                    exit;
-                }
-            }
-            mysqli_stmt_close($stmt);
-        } else {
-            $msj = "Error preparing statement";
+        $consulta = "SELECT * FROM lapiz_magico.usuarios WHERE email='$EMAIL' and password='$PSW'";
+        $rta=mysqli_query($ref,$consulta);
+                if(!$rta)
+            $msj="Query error";
+        else {
+            if(mysqli_num_rows($rta) == 0) {
+                $msj = "No se ha encontrado un usuario con ese nombre o contraseña.";
+            } else {
+                $_SESSION["OK"] = 1;
+                header("location:/index.php");
+                exit;
         }
     }
-}
+}}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -59,7 +48,7 @@ if(isset($_POST["EMAIL"]))
       <path d="M14 18h28v4H14zM14 26h28v4H14zM14 34h28v4H14z"/>
     </svg>
     <h2>Iniciar Sesión</h2>
-    <form action="login.php" method="POST" novalidate>
+    <form action="login_viejo.php" method="POST" novalidate>
       <label for="email">Correo Electrónico</label>
       <input
         type="email"
